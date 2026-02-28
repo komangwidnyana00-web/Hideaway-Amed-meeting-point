@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Hideaway Amed</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+width:100%;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav h2{
+color:gold;
+letter-spacing:2px;
+}
+
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+color:gold;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url("gallery/patung.jpeg") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero-content{
+background:rgba(0,0,0,0.45);
+padding:50px;
+border-radius:20px;
+backdrop-filter:blur(15px);
+animation:fadeUp 1.5s;
+}
+
+.hero h1{
+font-size:60px;
+color:gold;
+}
+
+.hero p{
+margin-top:15px;
+font-size:20px;
+}
+
+.btn{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+background:linear-gradient(45deg,gold,#ffd700);
+color:black;
+font-weight:bold;
+border-radius:50px;
+cursor:pointer;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+/* SECTION */
+section{
+padding:100px 60px;
+text-align:center;
+}
+
+.title{
+font-size:40px;
+color:gold;
+margin-bottom:50px;
+}
+
+/* CARDS */
+.cards{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+overflow:hidden;
+width:320px;
+backdrop-filter:blur(15px);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-15px);
+box-shadow:0 0 30px rgba(255,215,0,0.4);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3{
+margin:15px;
+color:gold;
+}
+
+.card p{
+padding:0 15px 20px;
+}
+
+/* TESTIMONI */
+.testimonial{
+max-width:800px;
+margin:auto;
+font-style:italic;
+line-height:1.8;
+}
+
+/* BOOKING */
+.booking{
+background:url("gallery/kolam1.jpeg.jpeg") center/cover;
+}
+
+.booking-box{
+background:rgba(0,0,0,0.6);
+padding:60px;
+border-radius:20px;
+display:inline-block;
+}
+
+/* FOOTER */
+footer{
+background:black;
+padding:40px;
+text-align:center;
+color:#aaa;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h1{
+font-size:35px;
+}
+nav{
+padding:20px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<h2>Hideaway Amed</h2>
+<div>
+<a href="#">Home</a>
+<a href="#fasilitas">Fasilitas</a>
+<a href="#booking">Booking</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
+<h1>Hideaway Amed</h1>
+<p>Menginap bukan sekadar tidur — ini pengalaman elite.</p
+<button class="btn" onclick="booking()">BOOK NOW</button>
+</div>
+</div>
+
+<!-- FASILITAS -->
+<section id="fasilitas">
+<h2 class="title">Fasilitas Premium</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="gallery/kolam1.jpeg.jpeg">
+<h3>Infinity Pool</h3>
+<p>Kolam renang dengan suasana alam .</p>
+</div>
+
+<div class="card">
+<img src="gallery/kamar1.jpeg">
+<h3>Luxury Bedroom</h3>
+<p>Kamar modern dengan smart lighting & king size bed.</p>
+</div>
+
+<div class="card">
+<img src="gallery/balkon.jpeg">
+<h3>Ocean & City View</h3>
+<p>Pemandangan sunset langsung dari balkon pribadi.</p>
+</div>
+
+</div>
+</section>
+
+<!-- TESTIMONI -->
+<section>
+<h2 class="title">Guest Experience</h2>
+<p class="testimonial">
+"Tempat terbaik yang pernah saya booking. Feel like staying
+at a 5-star private resort. Highly recommended!"
+</p>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="booking">
+<div class="booking-box">
+<h2 class="title">Reserve Your Stay</h2>
+<p>Booking sekarang sebelum full booked.</p>
+<button class="btn" onclick="booking()">WhatsApp Booking</button>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Royal Luxury Homestay — Exclusive Living Experience</p>
+</footer>
+
+<script>
+function booking(){
+window.open("https://wa.me/6281234567890","_blank");
+}
+</script>
+
+</body>
+</html>
